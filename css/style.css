@@ -1,0 +1,163 @@
+/**! SMACSS method - learning*!/
+---------------------------------------!*/
+
+/** BASE: color - background - font
+/**====================================*/
+* {
+  font-family: "Roboto", sans-serif;
+}
+h1,
+.versus {
+  font-family: "Press Start 2P", cursive;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-shadow: -1px 5px 1px gainsboro;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+input{
+}
+
+.note {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.versus {
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: -1px 5px 1px gainsboro;
+
+}
+
+.story thead {
+  font-weight: bold;
+}
+/** LAYOUT
+/**====================================*/
+main {
+  margin: 1em auto 3em auto;
+  width: 70%;
+}
+h1 {
+  text-align: center;
+  margin: auto;
+  word-wrap: break-word;
+}
+h2 {
+  margin: 1.2em 0;
+}
+.launchStory {
+  text-align: center;
+}
+input{
+  background-color: white;
+  border: 1px solid lightgreen;
+  border-radius: 2em;
+  padding: 1.4em;
+}
+
+.initOfGame {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 2px 2px 8px darkgray;
+  border-radius: 5px;
+  padding: 1em;
+  height: 230px;
+}
+.cards table {
+  width: 85%;
+}
+.cards tr {
+  vertical-align: bottom;
+}
+.card2 {
+  display: flex;
+}
+.versus {
+  text-align: center;
+  margin: auto 25px;
+}
+
+.story {
+  border-collapse: collapse;
+  box-shadow: 2px 2px 8px darkgray;
+}
+.story td {
+  margin: 1em;
+  padding: 0 0.8em;
+  line-height: 1.4em;
+}
+.story tbody tr {
+  border-top: 1px solid darkgrey;
+  vertical-align: baseline;
+}
+/** MODULE: Management of all modular elements
+/**====================================*/
+
+/** STATE: Status Management
+/**====================================*/
+input:hover {
+  box-shadow: 1px 1px 14px whitesmoke;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.6s;
+}
+
+
+/** THEME: Basic Layout Modifications Following Action
+/**====================================*/
+@media (max-width: 767px) {
+  main {
+    width: 100%;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  h2,
+  p {
+    text-align: center;
+  }
+  input {
+    display: block;
+    margin: auto;
+  }
+  .versus {
+    font-size: 2em;
+  }
+  .initOfGame {
+    justify-content: space-around;
+  }
+  .card2 {
+    display: block;
+  }
+  .story{
+    margin: 0 0.5em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  main {
+    width: 80%;
+  }
+  .versus {
+    margin: auto 25px;
+  }
+  
+}
+
+/**SHAME: All unclassified tweaks
+/**====================================*/
